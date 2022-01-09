@@ -30,17 +30,14 @@ public class Main {
         arrayListOfFruits.add("Apple");
         System.out.println("List:" + arrayListOfFruits);
 
-        for (int i = 0; i < arrayListOfFruits.size(); i++) {
-            if (arrayListOfFruits.get(i).contains("Orange")) {
-                arrayListOfFruits.set(i, "Grapefruit");
-                checkFruits = true;
-            }
-        }
-        if (checkFruits == false) {
-            System.out.println("Value not present");
-        } else {
-            System.out.println("ListOfReplace:" + arrayListOfFruits);
-        }
+        int indexOfOrange = arrayListOfFruits.indexOf("Orange");
+        int indexOfGrapefruit = arrayListOfFruits.indexOf("Grapefruit");
+
+        arrayListOfFruits.set(indexOfOrange, "Grapefruit");
+        arrayListOfFruits.set(indexOfGrapefruit, "Orange");
+
+        System.out.println("ListOfReplace:" + arrayListOfFruits);
+
         // Task number Three
 
         List<Integer> listNumberOne = new ArrayList<>();
