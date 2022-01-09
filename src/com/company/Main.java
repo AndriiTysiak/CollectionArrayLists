@@ -29,14 +29,15 @@ public class Main {
         arrayListOfFruits.add("Grapefruit");
         arrayListOfFruits.add("Apple");
         System.out.println("List:" + arrayListOfFruits);
-
         int indexOfOrange = arrayListOfFruits.indexOf("Orange");
         int indexOfGrapefruit = arrayListOfFruits.indexOf("Grapefruit");
-
-        arrayListOfFruits.set(indexOfOrange, "Grapefruit");
-        arrayListOfFruits.set(indexOfGrapefruit, "Orange");
-
-        System.out.println("ListOfReplace:" + arrayListOfFruits);
+        if (arrayListOfFruits.contains("Orange") && arrayListOfFruits.contains("Grapefruit")) {
+            arrayListOfFruits.set(indexOfOrange, "Grapefruit");
+            arrayListOfFruits.set(indexOfGrapefruit, "Orange");
+            System.out.println("ListOfReplace:" + arrayListOfFruits);
+        } else {
+            System.out.println("Value not present");
+        }
 
         // Task number Three
 
